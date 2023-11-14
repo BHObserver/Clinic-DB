@@ -5,3 +5,10 @@ CREATE TABLE patients (
     date_of_birth DATE
 );
 
+CREATE TABLE medical_histories (
+    id SERIAL PRIMARY KEY,
+    admitted_at TIMESTAMP,
+    patient_id INT,
+    status VARCHAR,
+    FOREIGN KEY (patient_id) REFERENCES patients(id)
+);
