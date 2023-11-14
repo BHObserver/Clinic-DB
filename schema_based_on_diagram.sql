@@ -54,3 +54,8 @@ CREATE INDEX idx_invoice_id ON invoice_items(invoice_id);
 CREATE INDEX idx_treatment_id ON invoice_items(treatment_id);
 CREATE INDEX idx_medical_history_id ON invoices(medical_history_id);
 
+-- Add FK indexes
+CREATE INDEX idx_fk_patient_id ON medical_histories(patient_id);
+CREATE INDEX idx_fk_invoice_id ON invoice_items(invoice_id);
+CREATE INDEX idx_fk_treatment_id ON invoice_items(treatment_id);
+CREATE INDEX idx_fk_medical_history_id ON invoices(medical_history_id);
