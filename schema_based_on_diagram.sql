@@ -39,3 +39,12 @@ CREATE TABLE invoices (
     FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id)
 );
 
+-- Create many-to-many join table for medical_histories and treatments
+CREATE TABLE medical_histories_treatments (
+    medical_history_id INT,
+    treatment_id INT,
+    PRIMARY KEY (medical_history_id, treatment_id),
+    FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id),
+    FOREIGN KEY (treatment_id) REFERENCES treatments(id)
+);
+
