@@ -1,5 +1,9 @@
 -- Create tables
-
+CREATE TABLE treatments (
+    id SERIAL PRIMARY KEY,
+    type VARCHAR(100),
+    name VARCHAR(100)
+);
 
 CREATE TABLE invoice_items (
     id SERIAL PRIMARY KEY,
